@@ -1,8 +1,6 @@
 # Symmetra
 
-A beautiful desktop application for taking math notes. Write in structured plain text and watch it transform into perfect LaTeX in real-time. Similar to Sublime Text, with a clean split-pane interface designed for speed and simplicity.
-
-**No AI, No API Keys, No Setup** - Just pure pattern matching and instant conversion!
+A beautiful desktop application for taking math notes. Write in structured plain text and watch it transform into perfect LaTeX in real-time. Designed for speed and simplicity.
 
 ## Features
 
