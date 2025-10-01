@@ -22,8 +22,6 @@ A beautiful desktop application for taking math notes. Write in structured plain
 
 - Node.js 16+ and npm
 
-That's it! No AI, no Ollama, no OpenAI API needed.
-
 ## Quick Start
 
 ### 1. Install Node.js
