@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symmetra - Syntax Guide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <link rel="stylesheet" href="guide-styles.css">
+</head>
+<body>
+    <div class="guide-container">
+        <header class="guide-header">
+            <div class="guide-header-content">
+                <h1>📖 Symmetra Syntax Guide</h1>
+                <p>Complete reference for English to LaTeX conversion</p>
+            </div>
+            <button class="close-btn" onclick="window.close()">
+                <span>✕</span>
+                <span>Close</span>
+            </button>
+        </header>
+
+        <div class="guide-content">
+            <!-- Document Structure -->
+            <section class="guide-section">
+                <h2>Document Structure</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <strong>Input:</strong>
+                            <code># Title</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <code>\section{Title}</code>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <strong>Input:</strong>
+                            <code>## Subtitle</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <code>\subsection{Subtitle}</code>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <strong>Input:</strong>
+                            <code>### Sub-subtitle</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <code>\subsubsection{Sub-subtitle}</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Powers and Exponents -->
+            <section class="guide-section">
+                <h2>Powers & Exponents</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>x squared</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r1"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>x cubed</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r2"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>x to the power of n</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r3"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>x to the 5</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r4"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fractions -->
+            <section class="guide-section">
+                <h2>Fractions</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>a over b</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r5"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>numerator over denominator</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r6"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roots -->
+            <section class="guide-section">
+                <h2>Roots</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>square root of x</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r7"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>sqrt(expression)</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r8"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Greek Letters -->
+            <section class="guide-section">
+                <h2>Greek Letters (Lowercase)</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>alpha</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r9"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>beta</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r10"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>gamma</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r11"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>delta</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r12"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>epsilon</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r13"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>theta</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r14"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>lambda</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r15"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>mu</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r16"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>pi</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r17"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>sigma</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r18"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>phi</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r19"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>omega</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r20"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Greek Letters Uppercase -->
+            <section class="guide-section">
+                <h2>Greek Letters (Uppercase)</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Delta</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r45"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Gamma</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r46"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Theta</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r47"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Lambda</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r48"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Sigma</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r49"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Phi</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r50"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Omega</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r51"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calculus -->
+            <section class="guide-section">
+                <h2>Calculus</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>integral from 0 to 5 of x squared</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r21"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>derivative of f with respect to x</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r22"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>limit as x approaches 0</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r23"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>sum from i=1 to n</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r24"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>partial derivative</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r25"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Relations and Operators -->
+            <section class="guide-section">
+                <h2>Relations & Operators</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>equals</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <code>=</code>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>not equal to</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r26"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>less than or equal to</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r27"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>greater than or equal to</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r28"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>approximately equal to</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r29"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Special Symbols -->
+            <section class="guide-section">
+                <h2>Special Symbols & Operators</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>infinity</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r30"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>sum</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r31"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>product</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r32"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>integral</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r33"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>times</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r52"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>dot</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r53"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>plus or minus</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r54"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>dots</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r55"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sets -->
+            <section class="guide-section">
+                <h2>Number Sets</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>real numbers</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r34"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>integers</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r35"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>rationals</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r36"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>naturals</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r37"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Logic -->
+            <section class="guide-section">
+                <h2>Logic Symbols</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>for all</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r38"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>there exists</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r39"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>and</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r40"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>or</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r41"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>not</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r42"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>implies</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r56"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>if and only if</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r57"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Set Operations -->
+            <section class="guide-section">
+                <h2>Set Operations</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>element of</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r58"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>not in</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r59"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>subset of</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r60"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>union</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r61"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>intersection</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r62"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>empty set</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r63"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Arrows -->
+            <section class="guide-section">
+                <h2>Arrows</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>rightarrow</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r64"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>leftarrow</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r65"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>maps to</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r66"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Functions -->
+            <section class="guide-section">
+                <h2>Trigonometric & Logarithmic Functions</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>sin</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r67"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>cos</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r68"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>tan</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r69"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>ln</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r70"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>log</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r71"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Operations -->
+            <section class="guide-section">
+                <h2>Other Useful Operations</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>absolute value of x</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r72"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>n choose k</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r73"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Environments -->
+            <section class="guide-section">
+                <h2>Mathematical Environments</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Theorem: Your theorem text</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <code>\begin{theorem}</code>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>End theorem</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <code>\end{theorem}</code>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Proof: Your proof text</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <code>\begin{proof}</code>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>End proof</code> or <code>QED</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <code>\end{proof}</code>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>Equation: Your equation</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <code>\begin{equation}</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subscripts -->
+            <section class="guide-section">
+                <h2>Subscripts</h2>
+                <div class="syntax-group">
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>x sub i</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r43"></span>
+                        </div>
+                    </div>
+                    <div class="syntax-item">
+                        <div class="input">
+                            <code>a sub n</code>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="output">
+                            <span class="rendered" id="r44"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script>
+        // Render all the math examples
+        const examples = {
+            r1: '$x^2$',
+            r2: '$x^3$',
+            r3: '$x^{n}$',
+            r4: '$x^{5}$',
+            r5: '$\\frac{a}{b}$',
+            r6: '$\\frac{numerator}{denominator}$',
+            r7: '$\\sqrt{x}$',
+            r8: '$\\sqrt{expression}$',
+            r9: '$\\alpha$',
+            r10: '$\\beta$',
+            r11: '$\\gamma$',
+            r12: '$\\delta$',
+            r13: '$\\epsilon$',
+            r14: '$\\theta$',
+            r15: '$\\lambda$',
+            r16: '$\\mu$',
+            r17: '$\\pi$',
+            r18: '$\\sigma$',
+            r19: '$\\phi$',
+            r20: '$\\omega$',
+            r21: '$\\int_{0}^{5} x^2 \\, dx$',
+            r22: '$\\frac{df}{dx}$',
+            r23: '$\\lim_{x \\to 0}$',
+            r24: '$\\sum_{i=1}^{n}$',
+            r25: '$\\partial$',
+            r26: '$\\neq$',
+            r27: '$\\leq$',
+            r28: '$\\geq$',
+            r29: '$\\approx$',
+            r30: '$\\infty$',
+            r31: '$\\sum$',
+            r32: '$\\prod$',
+            r33: '$\\int$',
+            r34: '$\\mathbb{R}$',
+            r35: '$\\mathbb{Z}$',
+            r36: '$\\mathbb{Q}$',
+            r37: '$\\mathbb{N}$',
+            r38: '$\\forall$',
+            r39: '$\\exists$',
+            r40: '$\\land$',
+            r41: '$\\lor$',
+            r42: '$\\neg$',
+            r43: '$x_{i}$',
+            r44: '$a_{n}$',
+            r45: '$\\Delta$',
+            r46: '$\\Gamma$',
+            r47: '$\\Theta$',
+            r48: '$\\Lambda$',
+            r49: '$\\Sigma$',
+            r50: '$\\Phi$',
+            r51: '$\\Omega$',
+            r52: '$\\times$',
+            r53: '$\\cdot$',
+            r54: '$\\pm$',
+            r55: '$\\ldots$',
+            r56: '$\\implies$',
+            r57: '$\\iff$',
+            r58: '$\\in$',
+            r59: '$\\notin$',
+            r60: '$\\subset$',
+            r61: '$\\cup$',
+            r62: '$\\cap$',
+            r63: '$\\emptyset$',
+            r64: '$\\rightarrow$',
+            r65: '$\\leftarrow$',
+            r66: '$\\mapsto$',
+            r67: '$\\sin$',
+            r68: '$\\cos$',
+            r69: '$\\tan$',
+            r70: '$\\ln$',
+            r71: '$\\log$',
+            r72: '$|x|$',
+            r73: '$\\binom{n}{k}$'
+        };
+
+        for (const [id, latex] of Object.entries(examples)) {
+            const element = document.getElementById(id);
+            if (element) {
+                katex.render(latex.replace(/\$/g, ''), element, {
+                    throwOnError: false
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+

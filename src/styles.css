@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #2d2d30;
+    border-bottom: 1px solid #3e3e42;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    -webkit-app-region: drag;
+}
+
+.app-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #cccccc;
+    letter-spacing: 0.5px;
+}
+
+.top-bar-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    -webkit-app-region: no-drag;
+}
+
+.action-btn {
+    background: transparent;
+    border: 1px solid #3e3e42;
+    color: #cccccc;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.action-btn:hover {
+    background: #3e3e42;
+    border-color: #007acc;
+}
+
+.action-btn .icon {
+    font-size: 14px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: #252526;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ec9b0;
+    animation: pulse 2s infinite;
+}
+
+.status-dot.converting {
+    background: #ffa500;
+}
+
+.status-dot.error {
+    background: #f48771;
+    animation: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Editor Container */
+.editor-container {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.editor-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #1e1e1e;
+}
+
+.pane-header {
+    background: #252526;
+    border-bottom: 1px solid #3e3e42;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 32px;
+}
+
+.pane-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pane-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pane-info {
+    font-size: 11px;
+    color: #858585;
+}
+
+.toggle-btn {
+    background: #3e3e42;
+    border: 1px solid #555;
+    color: #cccccc;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.toggle-btn:hover {
+    background: #4e4e4e;
+    border-color: #007acc;
+}
+
+#view-mode {
+    font-size: 11px;
+}
+
+.editor-textarea {
+    flex: 1;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    border: none;
+    outline: none;
+    padding: 16px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: none;
+    overflow-y: auto;
+}
+
+.editor-textarea::placeholder {
+    color: #6a6a6a;
+}
+
+.editor-output {
+    flex: 1;
+    background: #252526;
+    padding: 20px;
+    overflow-y: auto;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d4d4d4;
+}
+
+.editor-output.rendered {
+    background: #ffffff;
+    color: #000000;
+    font-family: 'Latin Modern Roman', 'Computer Modern', 'Times New Roman', serif;
+}
+
+.editor-output.code {
+    background: #252526;
+    color: #ce9178;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* KaTeX styling adjustments */
+.editor-output.rendered .katex {
+    font-size: 1.1em;
+}
+
+.editor-output.rendered .katex-display {
+    margin: 1.5em 0;
+}
+
+/* Document structure styling */
+.editor-output.rendered h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #1a1a1a;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 0.3em;
+}
+
+.editor-output.rendered h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+    color: #2a2a2a;
+}
+
+.editor-output.rendered h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 0.6em;
+    margin-bottom: 0.3em;
+    color: #3a3a3a;
+}
+
+.editor-output.rendered p {
+    margin: 0.8em 0;
+}
+
+.editor-output.rendered .theorem,
+.editor-output.rendered .proof {
+    background: #f0f7ff;
+    border-left: 4px solid #007acc;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 4px;
+}
+
+.editor-output.rendered .theorem::before {
+    content: 'Theorem: ';
+    font-weight: bold;
+    color: #007acc;
+}
+
+.editor-output.rendered .proof::before {
+    content: 'Proof: ';
+    font-weight: bold;
+    font-style: italic;
+    color: #007acc;
+}
+
+.editor-output.rendered .equation {
+    text-align: center;
+    margin: 1.5em 0;
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* Scrollbar Styling */
+.editor-textarea::-webkit-scrollbar {
+    width: 12px;
+}
+
+.editor-textarea::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.editor-textarea::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 6px;
+}
+
+.editor-textarea::-webkit-scrollbar-thumb:hover {
+    background: #4e4e4e;
+}
+
+/* Divider */
+.divider {
+    width: 1px;
+    background: #3e3e42;
+    cursor: col-resize;
+}
+
+.divider:hover {
+    background: #007acc;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    background: #007acc;
+    border-top: 1px solid #3e3e42;
+    padding: 4px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    font-size: 11px;
+    color: #ffffff;
+}
+
+.status-left, .status-right {
+    display: flex;
+    gap: 16px;
+}
+
+#backend-status {
+    font-weight: 500;
+}
+
+#backend-status.connected {
+    color: #4ec9b0;
+}
+
+#backend-status.disconnected {
+    color: #f48771;
+}
+
+/* Selection Colors */
+::selection {
+    background: #264f78;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: #264f78;
+    color: #ffffff;
+}
+
+/* Syntax highlighting for LaTeX output */
+.output {
+    color: #ce9178;
+}
+

@@ -1,0 +1,19 @@
+{
+  "name": "symmetra",
+  "version": "1.0.0",
+  "description": "Real-time plain English to LaTeX converter",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "keywords": ["latex", "notes", "electron", "desktop"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0"
+  },
+  "dependencies": {
+  }
+}
+

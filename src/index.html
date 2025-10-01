@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symmetra</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Latin+Modern+Roman:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="app-title">Symmetra</div>
+            <div class="top-bar-actions">
+                <button class="action-btn" id="open-btn" title="Open File">
+                    <span class="icon">📂</span>
+                </button>
+                <button class="action-btn" id="save-btn" title="Save LaTeX">
+                    <span class="icon">💾</span>
+                </button>
+                <button class="action-btn" id="guide-btn" title="Syntax Guide">
+                    <span class="icon">📖</span>
+                </button>
+                <div class="status-indicator" id="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Ready</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Editor Area -->
+        <div class="editor-container">
+            <!-- Left Pane: Plain Text Input -->
+            <div class="editor-pane">
+                <div class="pane-header">
+                    <span class="pane-title">Plain English Notes</span>
+                    <span class="pane-info" id="char-count">0 characters</span>
+                </div>
+                <textarea 
+                    id="input-editor" 
+                    class="editor-textarea"
+                    placeholder="Start typing your notes...
+
+Example:
+# The Quadratic Formula
+
+Theorem: For any quadratic equation ax squared plus bx plus c equals 0, where a not equal to 0, the solutions are:
+
+Equation: x equals negative b plus or minus square root of b squared minus 4ac over 2a
+
+Proof: We start by dividing both sides by a...
+End proof"
+                    spellcheck="false"
+                ></textarea>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- Right Pane: Rendered Output -->
+            <div class="editor-pane">
+                <div class="pane-header">
+                    <span class="pane-title">Rendered Output</span>
+                    <div class="pane-controls">
+                        <button class="toggle-btn" id="toggle-view-btn" title="Toggle between rendered and LaTeX code">
+                            <span id="view-mode">📄 Show Code</span>
+                        </button>
+                        <span class="pane-info" id="conversion-time">Real-time</span>
+                    </div>
+                </div>
+                <div id="output-editor" class="editor-output rendered" contenteditable="false"></div>
+            </div>
+        </div>
+
+        <!-- Bottom Status Bar -->
+        <div class="bottom-bar">
+            <div class="status-left">
+                <span id="backend-status">Parser: Ready (Click for help)</span>
+            </div>
+            <div class="status-right">
+                <span id="line-info">Ln 1, Col 1</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <script src="latex-parser.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>
+
