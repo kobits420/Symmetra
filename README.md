@@ -4,7 +4,6 @@ A beautiful desktop application for taking math notes. Write in structured plain
 
 ## Features
 
-- **Beautiful rendered output** - See actual mathematical notation, not LaTeX code!
 - Real-time conversion from structured text to LaTeX as you type
 - Toggle between rendered view and LaTeX code with one click
 - Split-pane editor inspired by Sublime Text
@@ -162,16 +161,6 @@ Symmetra uses **pattern matching** to convert your text:
 3. Replaces them with proper LaTeX commands
 4. Generates a complete, compilable LaTeX document
 5. All happens instantly in JavaScript - no AI needed!
-
-## Advantages Over AI
-
-- ✅ **Instant** - No 5-30 second wait times
-- ✅ **Beautiful rendering** - See actual math notation in real-time
-- ✅ **Consistent** - Same input always gives same output
-- ✅ **Predictable** - You control exactly what you get
-- ✅ **Free** - No API costs ever
-- ✅ **Private** - Nothing sent to external servers
-- ✅ **Reliable** - No "model is down" or rate limits
 
 ## Limitations
 
